@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1541007511330,"sparkVersion":"2.1.1.2.6.2.3-1","uid":"VectorAssembler_4876984555ef52c0cda1","paramMap":{"inputCols":["CarrierIndex","Origin_AirportIndex","Origin_StateIndex","Dest_AirportIndex","Dest_StateIndex","Year","Month","Day","Day_of_week","Origin_AirportID","Dest_AirportID"],"outputCol":"features"}}
