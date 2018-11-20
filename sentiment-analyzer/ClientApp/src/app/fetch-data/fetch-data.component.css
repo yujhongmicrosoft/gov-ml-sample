@@ -1,0 +1,29 @@
+
+.h2 {
+  display: inline-block; /* the default for span */
+  padding: 5px;
+}
+
+.h3{
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+.parent {
+  display: block;
+  margin-top: 20px;
+}
+
+.narrow {
+  display: inline;
+  width: 200px;
+  background: lightblue;
+  /* Just so it's visible */
+}
+
+.wide {
+  flex: 1;
+  /* Grow to rest of container */
+  background: lightgreen;
+  /* Just so it's visible */
+}

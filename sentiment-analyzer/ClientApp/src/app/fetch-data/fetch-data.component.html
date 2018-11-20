@@ -1,0 +1,23 @@
+<h1>Sentiment Analyzer</h1>
+
+
+<div class="form-group">
+  <label for="name">Enter Input Text</label>
+  <input type="text" [(ngModel)]="text" class="form-control" id="name" required>
+</div>
+
+<button (click)="makePrediction(text)" class="btn btn-success">Make Prediction</button>
+
+
+<div class="parent">
+  <div *ngIf="prediction === '1.0'" class="alert alert-success" role="alert">
+    <h3 style="display: inline;">Prediction: Positive!</h3>
+
+  </div>
+  <div *ngIf="prediction === '0.0'" class="alert alert-danger" role="alert">
+    <h3 style="display: inline;">Prediction: Negative</h3>
+
+  </div>
+</div>
+<td [ngClass]="getPredClass()"></td>
+
