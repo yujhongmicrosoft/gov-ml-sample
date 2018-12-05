@@ -13,8 +13,7 @@ ENV ds_blob_account ENTER STORAGE ACCOUNT NAME
 ENV ds_blob_key ENTER STORAGE KEY
 ENV ds_container ENTER CONTAINER NAME
 ENV ds_model_filename ENTER FILENAME FOR MODEL
-COPY flightservice.py /flightservice.py
-#COPY flightdelayfinalmodel / flightdelayfinalmodel/
+COPY sentimentservice.py /sentimentservice.py
 RUN apt-get update && \
     apt-get install -y curl bzip2 --no-install-recommends && \
     curl -s --url "https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh" --output /tmp/miniconda.sh && \
@@ -41,6 +40,6 @@ RUN apt-get update && \
     apt-get clean
 
 EXPOSE 8080
-ENTRYPOINT ["python","flightservice.py", "--host=0.0.0.0"]
+ENTRYPOINT ["python","sentimentservice.py", "--host=0.0.0.0"]
 #ENTRYPOINT ["spark-submit"]
 #CMD ["--help"]
